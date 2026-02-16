@@ -25,7 +25,6 @@ in
           ./options.nix
         ];
 
-        colorschemes.catppuccin.enable = true;
         plugins = {
           lualine.enable = true;
           lsp.enable = true;
