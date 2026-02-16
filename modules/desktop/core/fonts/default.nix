@@ -19,9 +19,11 @@ in
         # noto-fonts-color-emoji
         noto-fonts-monochrome-emoji
 
-        maple-mono.NF
-        nerd-fonts.jetbrains-mono
+        # maple-mono.NF
         nerd-fonts.noto
+        # nerd-fonts.iosevka
+        nerd-fonts.iosevka-term
+        nerd-fonts.jetbrains-mono
       ];
       fontconfig = {
         enable = true;

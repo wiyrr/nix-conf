@@ -4,7 +4,7 @@
   ...
 }:
 let
-  opacity = 1.0;
+  opacity = 0.5;
   fontSize = 15;
 in
 {
@@ -51,8 +51,8 @@ in
       };
 
       monospace = {
-        package = pkgs.maple-mono.NF;
-        name = "Maple Mono NF";
+        package = pkgs.iosevka;
+        name = "IosevkaTerm NF";
       };
 
       emoji = {
