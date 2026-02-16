@@ -92,7 +92,7 @@ in
         terminal = lib.mkForce 1.0;
         popups = lib.mkForce 1.0;
       };
-      sizes =
+      font.sizes =
         let
           fontSize = 12;
         in
