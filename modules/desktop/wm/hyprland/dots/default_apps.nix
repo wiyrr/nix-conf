@@ -13,8 +13,7 @@ let
 in
 {
   wayland.windowManager.hyprland.settings = {
-    # "$terminal" = "${defaultTerminal}";
-    "$terminal" = "footclient";
+    "$terminal" = "${defaultTerminal}";
     "$editor" = "$terminal -e nvim";
     "$screenshot" = "pkill rofi || uwsm-app -- screenshot";
     "$bar" = "waybar";

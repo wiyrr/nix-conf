@@ -25,15 +25,12 @@ in
       "$mod, F, exec, hyprland-scratchpad --raise-or-run-uwsm foot-scratch 'footclient --app-id foot-scratch'"
       "$mod CTRL, S, exec, hyprland-scratchpad --raise-or-run-uwsm wiremix-scratch 'footclient --app-id wiremix-scratch -e wiremix -v output'"
     ]
-    ++ lib.optionals osConfig.programs'.ghostty.isDefault [
-      "$mod, F, exec, hyprland-scratchpad --raise-or-run-uwsm ghostty.scratch 'ghostty --class=ghostty.scratch --background-opacity=${opacity} -e ${defaultShell}'"
-    ]
     ++ lib.optionals osConfig.programs'.kitty.isDefault [
       "$mod, F, exec, hyprland-scratchpad --raise-or-run-uwsm kitty-scratch 'kitty --class kitty-scratch --override background_opacity=${opacity}'"
     ];
 
     windowrule = [
-      "tag +scratch_md, match:class ^(foot-scratch)$|^(ghostty-scratch)$|^(kitty-scratch)$|^(wiremix-scratch)$"
+      "tag +scratch_md, match:class ^(foot-scratch)$|^(kitty-scratch)$|^(wiremix-scratch)$"
       "tag +scratch_side, match:class ^(io.github.xiaoyifang.goldendict_ng)$"
       "float on, no_anim on, size 1280 720, match:tag scratch_md"
       # "float on, no_anim on, stay_focused on, move 1468 67, size 564 1068, match:tag scratch_side"

@@ -16,12 +16,12 @@
 
       # Noctalia-shell
       "$mod, K, exec, $clipboard"
-      # "$mod SHIFT, K, exec, $emoji"
-      # "$mod CTRL, L, exec, $logout"
-      # "$mod CTRL, N, exec, $notify"
+      "$mod SHIFT, K, exec, $emoji"
+      "$mod CTRL, L, exec, $logout"
+      "$mod CTRL, N, exec, $notify"
       "$mod SHIFT, w, exec, $wallpaper"
-      # "$mod CTRL, w, exec, $randomwal"
-      # "$mod ALT, w, exec, $togglewal"
+      "$mod CTRL, w, exec, $randomwal"
+      "$mod ALT, w, exec, $togglewal"
 
       "$mod CTRL,  B, exec, $bar-reload"
       "$mod SHIFT, B, exec, $bar-toggle"

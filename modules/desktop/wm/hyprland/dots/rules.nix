@@ -47,6 +47,7 @@
       "no_anim on,match:namespace launcher"
       "blur on, ignore_alpha 0, match:namespace waybar"
       "blur on, ignore_alpha 0, animation slide bottom, match:namespace rofi"
+      "blur on, ignore_alpha 0, animation slide bottom, match:namespace ^(.*noctalia.*)$"
       "blur on, ignore_alpha 0, animation slide right, match:namespace notifications"
       "animation fade, match:namespace hyprlock"
     ];
