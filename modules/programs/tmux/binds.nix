@@ -3,7 +3,6 @@
     # keyMode = "vi";
     # prefix = "M-Space";
     extraConfig = ''
-
       # Set new prefix (Alt+Space)
       unbind C-b
       set -g prefix M-Space
@@ -25,8 +24,8 @@
       bind -n M-r source-file ~/.config/tmux/tmux.conf \; display-message "tmux.conf reloaded"
 
       # General configs
-      # bind -n M-q kill-pane
-      # bind -n M-Q kill-window
+      bind -n M-q kill-pane
+      bind -n M-Q kill-window
 
       bind -n M-Enter split-window -v -c "#{pane_current_path}" \; select-layout
       bind -n C-S-M-Enter break-pane -a
