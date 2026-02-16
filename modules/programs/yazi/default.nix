@@ -14,7 +14,7 @@ in
       imports = [
         # ./plugins/jump-to-char.nix
         ./plugins/mediainfo.nix
-        ./plugins/mount.nix
+        # ./plugins/mount.nix
         # ./plugins/ouch.nix
         ./plugins/restore.nix
       ];
@@ -43,7 +43,7 @@ in
             ;
         };
         keymap = import ./binds.nix;
-        theme = import ./theme.nix;
+        # theme = import ./theme.nix;
         settings = {
           mgr = {
             layout = [
@@ -68,12 +68,12 @@ in
             prepend_fetchers = [
               {
                 id = "git";
-                name = "*";
+                url = "*";
                 run = "git";
               }
               {
                 id = "git";
-                name = "*/";
+                url = "*/";
                 run = "git";
               }
             ];
@@ -82,7 +82,9 @@ in
         initLua =
           # lua
           ''
-            require("git"):setup()
+            require("git"):setup({
+              order = 1500,
+            })
             require("starship"):setup()
             require("full-border"):setup({
               type = ui.Border.PLAIN,
@@ -90,10 +92,10 @@ in
             -- require("zoxide"):setup({
             --   update_db = false,
             -- })
-            --   require("session"):setup({
-            --     sync_yanked = true,
-            --   })
-            -- '';
+            require("session"):setup({
+              sync_yanked = true,
+            })
+          '';
       };
     };
   };
