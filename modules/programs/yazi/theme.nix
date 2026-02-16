@@ -2,6 +2,14 @@
   icon = {
     prepend_dirs = [
       {
+        name = "Library";
+        text = "";
+      }
+      {
+        name = "Notes";
+        text = "󰂿";
+      }
+      {
         name = "desktop";
         text = "";
       }
