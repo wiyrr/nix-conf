@@ -47,7 +47,7 @@ static const struct xkb_rule_names xkb_rules = {
 	.options = NULL,
 };
 
-static const int repeat_rate = 35;
+static const int repeat_rate = 40;
 static const int repeat_delay = 200;
 
 /* Trackpad */
@@ -91,7 +91,7 @@ static const char *down_brightness[] = { "brightnessctl", "set", "10%-", NULL };
 static const Key keys[] = {
 	/* Note that Shift changes certain key codes: c -> C, 2 -> at, etc. */
 	/* modifier                  key                 function        argument */
-	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_W,          killclient,     {0} },
+	{ MODKEY,                    XKB_KEY_q,          killclient,     {0} },
 	// { MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_q,          spawn,          {.v = ustop} },
 	{ MODKEY,                    XKB_KEY_s,          spawn,          {.v = menucmd} },
 	{ MODKEY,                    XKB_KEY_j,          spawn,          {.v = browser} },
