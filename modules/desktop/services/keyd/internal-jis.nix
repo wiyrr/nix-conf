@@ -21,7 +21,7 @@ in
       l = "lettermod(alt, i, ${toString holdtime}, ${toString taptime})";
       ";" = "lettermod(meta, c, ${toString holdtime}, ${toString taptime})";
 
-      leftalt = "overloadt(meta, esc, ${toString taptime})";
+      leftalt = "overloadt(meta, tab, ${toString taptime})";
       muhenkan = "overloadt(nav, r, ${toString taptime})";
       space = "overloadt(num, space, ${toString taptime})";
 
@@ -55,7 +55,7 @@ in
 
       esc = "noop";
       backspace = "noop";
-      capslock = "noop";
+      capslock = "esc";
     };
     "nav" = {
       w = "C-pageup";
