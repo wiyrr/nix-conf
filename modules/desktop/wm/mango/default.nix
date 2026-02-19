@@ -19,20 +19,27 @@ in
   config = lib.mkIf cfg.enable {
     programs.uwsm.waylandCompositors.mango = {
       prettyName = "Mango";
-      comment = "";
+      comment = "A streamlined but feature-rich Wayland compositor";
       binPath = "/run/current-system/sw/bin/mango";
-      # binPath = "${pkgs.mango}/bin/mango;
     };
 
     programs.mango = {
       enable = true;
     };
 
+    xdg.portal.config.mango.default = lib.mkForce [
+      "wlr"
+      "gtk"
+    ];
+
+    environment.systemPackages = with pkgs; [
+      xdg-desktop-portal-wlr
+      xdg-desktop-portal-gtk
+    ];
+
     hm' = {
       imports = [ inputs.mango.hmModules.mango ];
       home.packages = with pkgs; [
-        noctalia-shell
-        app2unit
       ];
     };
   };
