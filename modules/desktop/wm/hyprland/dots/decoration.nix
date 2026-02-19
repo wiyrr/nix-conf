@@ -13,15 +13,15 @@
       enabled = true;
       size = 4;
       passes = 5;
-      ignore_opacity = true;
+      # ignore_opacity = true;
       noise = 0.045;
       xray = false;
       popups = true;
       popups_ignorealpha = 0.2;
       new_optimizations = true;
       brightness = 0.75;
-      vibrancy = 0.1696;
-      vibrancy_darkness = 0.0;
+      # vibrancy = 0.1696;
+      # vibrancy_darkness = 0.0;
       input_methods = true;
     };
 
