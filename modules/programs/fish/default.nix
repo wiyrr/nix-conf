@@ -41,7 +41,7 @@ in
             # fish
             ''
               set -U fish_greeting ""
-              set -xg NVIM_APPNAME lv
+              set -xg NVIM_APPNAME vvim
               set -xg EDITOR nvim
               set -xg VISUAL $EDITOR
               set -xg SUDO_EDITOR $EDITOR

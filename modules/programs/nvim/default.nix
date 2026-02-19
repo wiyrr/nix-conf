@@ -12,9 +12,9 @@ in
   # TODO: Port nvim config to Nixvim (or nvf)
   config = lib.mkIf cfg.enable {
     hm'.home.shellAliases = {
-      v = "NVIM_APPNAME=lv nvim";
+      lv = "NVIM_APPNAME=lv nvim";
       vv = "NVIM_APPNAME=nvim nvim";
-      vvv = "NVIM_APPNAME=vv nvim";
+      v = "NVIM_APPNAME=vvim nvim";
     };
 
     hm'.xdg.mimeApps.defaultApplications =
@@ -39,6 +39,7 @@ in
       gcc
       gnumake
       lua-language-server
+      markdown-oxide
       markdownlint-cli2
       marksman
       neovim
