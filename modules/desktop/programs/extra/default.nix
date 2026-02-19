@@ -11,42 +11,53 @@ in
   options.programs'.extraPackages.enable = lib.mkEnableOption { };
   config = lib.mkIf cfg.enable {
     hm'.home.packages = with pkgs; [
+      OVMF
+      bluetui
       gowall
+      libnotify
       microfetch
       qemu
       scdl
       tealdeer
-      yt-dlp
+      tmux
       wiremix
-      libnotify
-      # bluetui
+      yt-dlp
 
       ## gtk
       d-spy # dbus gui
       easyeffects
       easytag
-      gimp3
+      # gimp3
       # pavucontrol
       librewolf
 
       ## qt
-      kdePackages.kdenlive
+      # kdePackages.kdenlive
       # krita
-      puddletag
+      # puddletag
       jellyfin-desktop
+      qbittorrent
 
       ## electron
+      # obsidian
+      # vesktop
+      legcord
+      feishin
 
       ## other
       # blender
       # grayjay
       # vpkedit
-      feishin
-      melonDS
-      mgba
+      # melonDS
+      # mgba
       anki
+      thunderbird
+      picard
+      calibre
+      grayjay
 
-      qbittorrent
+      foot
+      vpkedit
 
       (pkgs.symlinkJoin {
         name = "vlc";

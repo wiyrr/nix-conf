@@ -1,13 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}:
-let
-  userName = "tsubaki";
-  hmConfig = config.home-manager.users.${userName};
-  configDirectory = "${hmConfig.home.homeDirectory}/dots";
-in
+{ pkgs, ... }:
 {
   imports = [
     ./disko.nix
@@ -19,36 +10,17 @@ in
     networking'.mullvad.enable = true;
     security'.doas.enable = true;
 
-    programs' = {
-      bat.enable = true;
-      btop.enable = true;
-      eza.enable = true;
-      fastfetch.enable = true;
-      fish.enable = true;
-      fish.isDefault = true;
-      fzf.enable = true;
-      git.enable = true;
-      gtrash.enable = true;
-      lazygit.enable = true;
-      nixvim.enable = true;
-      nvim.enable = true;
-      ripgrep.enable = true;
-      starship.enable = true;
-      tmux.enable = true;
-      yazi.enable = true;
-      zoxide.enable = true;
-    };
-
     ## DESKTOP
-    programs'.hyprland.isDefault = true; # dwl, hyprland, niri
-    programs'.foot.isDefault = true; # foot, ghostty, kitty
+    programs'.mango.isDefault = true; # dwl, mango, hyprland, sway
+    programs'.kitty.isDefault = true; # foot, kitty
     programs'.librewolf.isDefault = true; # firefox, librewolf, zen-browser
 
     # programs'.dwl.enable = true;
     programs'.hyprland.enable = true;
-    # programs'.mango.enable = true;
-    # programs'.niri.enable = true;
+    programs'.mango.enable = true;
     # programs'.sway.enable = true;
+
+    programs'.noctalia-shell.enable = true;
 
     desktop = {
       fonts.enable = true;
@@ -58,59 +30,41 @@ in
     };
 
     programs' = {
-      # general
+      cava.enable = true;
       goldendict.enable = true;
-      gpu-screen-recorder.enable = true;
-      hyprlock.enable = true;
-      rofi.enable = true;
+      mpv.enable = true;
+      pqiv.enable = true;
+      spotify.enable = true;
       thunar.enable = true;
-      tofi.enable = true;
-      # tray-tui.enable = true;
+      tray-tui.enable = true;
+      zathura.enable = true;
 
-      # terminal emulator
-      foot.enable = true;
-      # ghostty.enable = true;
-      # kitty.enable = true;
+      # foot.enable = true;
+      kitty.enable = true;
 
-      # browser
       # firefox.enable = true;
+      helium-browser.enable = true;
       # librewolf.enable = true;
       # mullvad-browser.enable = true;
       # qutebrowser.enable = true;
       # zen-browser.enable = true;
 
-      # media
-      # cava.enable = true;
-      mpv.enable = true;
-      pqiv.enable = true;
-      spotify.enable = true;
-      zathura.enable = true;
-
       extraPackages.enable = true;
     };
 
     services' = {
-      dunst.enable = true;
       fcitx.enable = true;
       keyd.enable = true;
       hypridle.enable = true;
       pipewire.enable = true;
       stash.enable = true;
-      swww.enable = true;
-      waybar.enable = true;
-      wl-clip-persist.enable = true;
     };
 
     gaming' = {
       gamemode.enable = true;
-      # lutris.enable = true;
+      lutris.enable = true;
+      mangohud.enable = true;
       steam.enable = true;
-    };
-
-    globals = {
-      userName = userName;
-      homeDirectory = "/home/${userName}";
-      configDirectory = configDirectory;
     };
 
     console = {
