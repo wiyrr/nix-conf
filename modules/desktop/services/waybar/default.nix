@@ -1,6 +1,7 @@
 {
-  lib,
   config,
+  lib,
+  pkgs,
   ...
 }:
 let
@@ -9,6 +10,22 @@ in
 {
   options.services'.waybar.enable = lib.mkEnableOption { };
   config = lib.mkIf cfg.enable {
+    # systemd.user.services.waybar = {
+    #   after = [ "graphical-session.target" ];
+    #   wantedBy = [ "graphical-session.target" ];
+    #   description = "Highly customizable Wayland bar for Sway and Wlroots based compositors.";
+    #   serviceConfig = {
+    #     Type = "exec";
+    #     ExecStart = "${lib.getExe pkgs.waybar}";
+    #     ExecReload = "kill -SIGUSR2 $MAINPID";
+    #     Restart = "on-failure";
+    #     ExecCondition = [
+    #       ''
+    #         ${pkgs.systemd}/lib/systemd/systemd-xdg-autostart-condition "sway:Hyprland" ""
+    #       ''
+    #     ];
+    #   };
+    # };
     hm' = {
       imports = lib.filesystem.listFilesRecursive ./modules ++ [ ./style.nix ];
       programs.waybar = {
@@ -24,6 +41,7 @@ in
 
           modules-left = [
             "idle_inhibitor"
+            "hyprland/workspaces"
             "sway/workspaces"
           ];
 

@@ -14,8 +14,8 @@
         #idle_inhibitor { font-size: 22pt; }
         #idle_inhibitor.activated { color: @base0C; }
         #workspaces * { font-size: 12px; padding: 1px; }
-        #workspaces button { color: @base04; }
-        #workspaces button.empty { color: @base02; }
+        #workspaces button { color: @base03; }
+        #workspaces button.empty { color: @base01; }
         /* #workspaces button.active { color: @base07; } */
         /* #workspaces button.focused { color: @base07; } */
         #workspaces button.focused { color: #f5c2e7; }
