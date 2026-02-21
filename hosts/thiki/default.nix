@@ -18,7 +18,7 @@ in
   ];
   config = {
     hardware'.amdgpu.enable = true;
-    # hardware'.bluetooth.enable = true;
+    hardware'.bluetooth.enable = true;
     networking'.iwd.enable = true;
     networking'.mullvad.enable = true;
     security'.doas.enable = true;
@@ -45,7 +45,8 @@ in
     programs'.dwl.isDefault = true; # dwl, hyprland, niri
 
     programs'.dwl.enable = true;
-    programs'.hyprland.enable = true;
+    # programs'.hyprland.enable = true;
+    programs'.mango.enable = true;
     programs'.noctalia-shell.enable = true;
 
     desktop = {
@@ -58,13 +59,15 @@ in
     ## default programs
     programs'.foot.isDefault = true; # foot, ghostty, kitty
     programs'.librewolf.isDefault = true; # firefox, librewolf, zen-browser
-    # programs'.tofi.isDefault = true;
+    programs'.tofi.isDefault = true;
 
     programs' = {
       foot.enable = true;
-      # tofi.enable = true;
+      tofi.enable = true;
       # librewolf.enable = true;
       # mpv.enable = true;
+
+      goldendict.enable = true;
     };
 
     services' = {
@@ -82,7 +85,7 @@ in
     # laptop-specific config
     services.power-profiles-daemon.enable = true;
     environment.systemPackages = with pkgs; [
-      alsa-utils
+      # alsa-utils
       librewolf
       brightnessctl
     ];
@@ -92,7 +95,7 @@ in
         terminal = lib.mkForce 1.0;
         popups = lib.mkForce 1.0;
       };
-      font.sizes =
+      fonts.sizes =
         let
           fontSize = 12;
         in
