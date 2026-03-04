@@ -21,11 +21,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # stash = {
-    #   url = "github:notashelf/stash";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
-
     helium = {
       url = "github:amaanq/helium-flake";
       inputs.nixpkgs.follows = "nixpkgs";
