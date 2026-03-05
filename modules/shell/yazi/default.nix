@@ -37,6 +37,7 @@
               ];
             };
           };
+          theme = fromTOML (builtins.readFile ./theme.toml);
         };
 
         initLua = pkgs.writeText "init.lua" /* lua */ ''
