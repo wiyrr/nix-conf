@@ -20,6 +20,8 @@
         enable = true;
         flags = [ "--cmd cd" ];
       };
-      environment.shellAliases.z = "cdi";
+      environment.shellAliases = {
+        z = "cdi";
+      };
     };
 }
