@@ -5,7 +5,7 @@
       cfg'.yaziPlugins = {
         # jump-to-char.enable = true;
         mediainfo.enable = true;
-        # mount.enable = true;
+        mount.enable = true;
         # ouch.enable = true;
         restore.enable = true;
       };

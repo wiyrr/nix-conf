@@ -8,6 +8,7 @@
     {
       options.cfg'.yaziPlugins.mount.enable = lib.mkEnableOption { };
       config = lib.mkIf cfg.enable {
+        services.udisks2.enable = true;
         programs.yazi = {
           plugins = with pkgs.yaziPlugins; {
             inherit mount;
