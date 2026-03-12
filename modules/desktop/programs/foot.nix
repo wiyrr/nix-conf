@@ -12,8 +12,8 @@
               urgent = true;
             };
 
-            colors = {
-              alpha = 1.0;
+            colors-dark = {
+              alpha = 0.5;
 
               # Catppuccin Mocha
               cursor = "11111b f5e0dc";
