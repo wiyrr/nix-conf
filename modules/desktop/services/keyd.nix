@@ -14,7 +14,7 @@
         keyboards =
           let
             holdtime = 200;
-            taptime = 175;
+            taptime = 150;
             handsDownPromethium = {
               # JIS layout
               q = "f";
@@ -50,7 +50,7 @@
               "." = "=";
 
               muhenkan = "r";
-              henkan = "backspace";
+              katakanahiragana = "backspace";
               leftalt = "overloadt(meta, esc, ${toString taptime})";
               capslock = "q";
               "'" = "z";
@@ -80,36 +80,16 @@
                   # Lt
                   leftalt = "overloadt(meta, esc, ${toString taptime})";
                   muhenkan = "overloadt(nav, r, ${toString taptime})";
-                  space = "overloadt(num, space, ${toString taptime})";
+                  space = "overloadt(sym, enter, ${toString taptime})";
+                  henkan = "overloadt(num, space, ${toString taptime})";
 
                   # Chords
                   "w+e" = "q";
                   "e+r" = "z";
-                  "u+i" = "S-6"; # ^
-                  "i+o" = "S-2"; # @
-
-                  "r+f" = "S-backslash"; # |
-                  "e+d" = "backslash"; # \
-                  "u+j" = "S-8"; # *
-                  "i+k" = "S-7"; # &
-
-                  "s+f" = "C-space"; # toggle fcitx
-                  "j+l" = "S-5"; # %
 
                   "x+c" = "C-insert"; # copy
+                  "x+v" = "C-x"; # cut
                   "c+v" = "S-insert"; # paste
-
-                  "muhenkan+s" = "S-9"; # (
-                  "muhenkan+d" = "S-["; # {
-                  "muhenkan+f" = "[";
-
-                  "muhenkan+j" = "]";
-                  "muhenkan+k" = "S-]"; # }
-                  "muhenkan+l" = "S-0"; # )
-
-                  "space+j" = "S-1"; # !
-                  "space+k" = "S-3"; # #
-                  "space+l" = "S-4"; # $
 
                   # Unbind
                   esc = "noop";
@@ -118,13 +98,11 @@
                 };
 
                 "nav" = {
-                  w = "C-pageup";
+                  f = "C-pageup";
                   r = "C-pagedown";
 
-                  a = "leftmeta";
                   s = "leftalt";
                   d = "leftcontrol";
-                  f = "leftshift";
 
                   j = "left";
                   k = "down";
@@ -151,12 +129,16 @@
                   x = "7";
                   c = "8";
                   v = "9";
-                  muhenkan = "0";
+                };
+
+                "sym" = {
+
                 };
 
                 "main" = handsDownPromethium;
               };
             };
+
             external = {
               ids = [
                 "05af:1023:c3bf50aa" # BFKB113PBK
