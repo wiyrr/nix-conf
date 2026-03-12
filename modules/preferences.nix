@@ -9,21 +9,21 @@
         userName = mkOption {
           type = types.str;
           default = "tsubaki";
-          example = "tsubaki";
+          example = "alice";
           description = "Default user name";
         };
 
         homeDir = mkOption {
           type = types.str;
           default = "/home/tsubaki";
-          example = "/home/tsubaki";
+          example = "/home/alice";
           description = "Path of user home directory";
         };
 
         configDir = mkOption {
           type = types.str;
           default = "/home/tsubaki/dots";
-          example = "/home/tsubaki/dots";
+          example = "/home/alice/nix-config";
           description = "Path of config directory";
         };
 
