@@ -18,6 +18,7 @@
           eza
           fd
           ffmpeg
+          git
           file
           tealdeer
           htop
@@ -56,7 +57,7 @@
           # Wrapped Programs
           selfpkgs.bat
           selfpkgs.fzf
-          selfpkgs.git
+          # selfpkgs.git
           selfpkgs.lazygit
           selfpkgs.nh
           selfpkgs.tmux

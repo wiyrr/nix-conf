@@ -3,15 +3,12 @@
   perSystem =
     { pkgs, ... }:
     let
-      conf =
-        pkgs.writeText "config.yml"
-          # yaml
-          ''
-            gui:
-              border: single
+      conf = pkgs.writeText "config.yml" /* yaml */ ''
+        gui:
+          border: single
 
-            promptToReturnFromSubprocess: true
-          '';
+        promptToReturnFromSubprocess: true
+      '';
     in
     {
       packages.lazygit = inputs.wrappers.lib.wrapPackage {

@@ -40,21 +40,14 @@
             jis = "recode shift_jis..utf8";
             utf16 = "recode utf16..utf8";
 
-            mc = "mullvad connect";
-            md = "mullvad disconnect";
-            mr = "mullvad reconnect";
-            ms = "mullvad status";
-
             t = "tmux";
             ts = "tmux new-session -s";
             tl = "tmux list-sessions";
-            ta = "tmux attach -t";
+            ta = "tmux attach";
+            tat = "tmux attach -t";
             tad = "tmux attach -d -t";
             tkss = "tmux kill-session -t";
             tksv = "tmux kill-server";
-
-            tasks = "tmuxp load -y tasks";
-            notes = "tmuxp load -y notes";
 
             nf = "nix flake";
             nfc = "nix flake check";
@@ -109,6 +102,8 @@
             gsw = "git switch";
             gt = "git tag";
             gts = "git tag -s";
+
+            lg = "lazygit";
           };
         };
       };

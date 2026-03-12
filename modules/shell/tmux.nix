@@ -119,8 +119,8 @@
         bind-key -n M-B set -g status
 
         # Fingers
-        # bind h run -b "#{@fingers-cli} start #{pane_id}"
-        # bind u run -b "#{@fingers-cli} start #{pane_id} --patterns url"
+        bind h run -b "#{@fingers-cli} start #{pane_id}"
+        bind u run -b "#{@fingers-cli} start #{pane_id} --patterns url"
       '';
     in
     {
