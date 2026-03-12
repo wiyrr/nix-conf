@@ -153,7 +153,7 @@
             DeactivateKeys=
 
             [Hotkey/TriggerKeys]
-            0=Control+Space
+            0=Control+space
 
             [Hotkey/PrevPage]
             0=Up
