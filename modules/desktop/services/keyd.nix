@@ -68,24 +68,23 @@
                 };
                 "mods:layout" = {
                   # Homerow mods
-                  a = "lettermod(meta, s, ${toString holdtime}, ${toString taptime})";
                   s = "lettermod(alt, n, ${toString holdtime}, ${toString taptime})";
                   d = "lettermod(control, t, ${toString holdtime}, ${toString taptime})";
-                  f = "lettermod(shift, h, ${toString holdtime}, ${toString taptime})";
-                  j = "lettermod(shift, a, ${toString holdtime}, ${toString taptime})";
+                  f = "overloadt(sym, h, ${toString holdtime}, ${toString taptime})";
+                  j = "overloadt(sym, a, ${toString holdtime}, ${toString taptime})";
                   k = "lettermod(control, e, ${toString holdtime}, ${toString taptime})";
                   l = "lettermod(alt, i, ${toString holdtime}, ${toString taptime})";
-                  ";" = "lettermod(meta, c, ${toString holdtime}, ${toString taptime})";
 
                   # Lt
                   leftalt = "overloadt(meta, esc, ${toString taptime})";
                   muhenkan = "overloadt(nav, r, ${toString taptime})";
-                  space = "overloadt(sym, enter, ${toString taptime})";
-                  henkan = "overloadt(num, space, ${toString taptime})";
+                  space = "lettermodt(shift, space, ${toString taptime})";
+                  henkan = "overloadt(num, enter, ${toString taptime})";
 
                   # Chords
                   "w+e" = "q";
                   "e+r" = "z";
+                  "d+f" = "esc";
 
                   "x+c" = "C-insert"; # copy
                   "x+v" = "C-x"; # cut
@@ -100,7 +99,6 @@
                 "nav" = {
                   f = "C-pageup";
                   r = "C-pagedown";
-
                   s = "leftalt";
                   d = "leftcontrol";
 
@@ -132,7 +130,29 @@
                 };
 
                 "sym" = {
+                  q = "S-`"; # `
+                  w = "S-0"; # )
+                  e = "S-]"; # }
+                  r = "]"; # ]
+                  t = "S-2"; # @
+                  y = "S-:"; # :
+                  u = "S-1"; # !
+                  i = "S-8"; # *
+                  o = "S-7"; # &
 
+                  # TODO: ``` macro
+                  # p = ""; # ```
+
+                  a = "S-`"; # ~
+                  s = "S-9"; # (
+                  d = "S-["; # {
+                  f = "["; # [
+                  g = "backslash"; # \
+                  h = "S-,"; # <
+                  j = "S-6"; # ^
+                  k = "S-3"; # #
+                  l = "S-5"; # %
+                  ";" = "S-4"; # $
                 };
 
                 "main" = handsDownPromethium;
