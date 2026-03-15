@@ -7,7 +7,7 @@
           let
             nvim = "nvim.desktop";
             thunar = "thunar.desktop";
-            librewolf = "lebrewolf.desktop";
+            librewolf = "librewolf.desktop";
             mpv = "mpv.desktop";
             zathura = "org.pwmt.zathura.desktop";
             fileroller = "org.gnome.FileRoller.desktop";
