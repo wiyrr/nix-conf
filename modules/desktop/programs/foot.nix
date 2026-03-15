@@ -97,6 +97,9 @@
               search-start = "Control+slash";
               show-urls-launch = "Control+Shift+h";
               unicode-input = "none";
+
+              primary-paste = "none";
+              clipboard-paste = "Control+Shift+v XF86Paste Shift+Insert";
             };
           };
         }).wrapper;
